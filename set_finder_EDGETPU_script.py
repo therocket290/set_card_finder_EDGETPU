@@ -55,7 +55,7 @@ def get_cards(image, numcards=1):
     gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
     #gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
     blur = cv2.GaussianBlur(gray,(1,1),1000)
-    flag, thresh = cv2.threshold(blur, 150, 255, cv2.THRESH_BINARY)
+    flag, thresh = cv2.threshold(blur, 135, 255, cv2.THRESH_BINARY)
     
     contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     #image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
